@@ -1,7 +1,7 @@
 <?php
 
 	include("includes/db.php");
-	if(isset($_GET['delete_brand'])){
+if(isset($_GET['delete_brand'])){
 	$delete_id = $_GET['delete_brand'];
 	$delete_brand = "delete from brands where brand_id = '$delete_id' ";
 	$run_delete = mysqli_query($con,$delete_brand);

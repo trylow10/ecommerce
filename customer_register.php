@@ -1,4 +1,4 @@
-<?php
+<?php  
 session_start();
 include("functions/functions.php");
 include("includes/db.php");//db.php means making a connection
@@ -7,8 +7,8 @@ include("includes/db.php");//db.php means making a connection
 
 
 <html>
-	<head>
-		<title>My Online Shop</title>
+	<head> 
+		<title>My Online Shop</title> 
 		<link rel="stylesheet" href="styles/style.css " media="all" type="text/css" >
 	<head>
 <body>
@@ -18,10 +18,10 @@ include("includes/db.php");//db.php means making a connection
 		<!-- header starts from here-->
 		<div class="header_wrapper"><!--this is header-->
 			<a href="index.php"><img id="logo" src="images/logo.png"/></a>
-
+			
 			<img id="banner" src="images/ad_banner.PNG"/>
 
-
+			
 		</div><!-- close of class header_wrapper -->
 
 		<!--Navigation Bar starts-->
@@ -32,11 +32,11 @@ include("includes/db.php");//db.php means making a connection
 				<li><a href="customer/my_account.php">My Account</a></li>
 				<li><a href="#">Sign Up</a></li>
 				<li><a href="cart.php">Shopping Cart</a></li>
-				<li><a href="#">Contact us</a></li>
+				<li><a href="#">Contact us</a></li>	
 
 			</ul>
 
-			<div id="form">
+			<div id="form"> 
 				<form method="get" action="results.php" enctype="multipart/form-data">
 					<input type="text" name="user_query" placeholder="Search a product" />
 					<input type="submit" name="search" value="Search" />
@@ -46,19 +46,19 @@ include("includes/db.php");//db.php means making a connection
 
 			</div>
 		</div> <!--Navigation Bar ends-->
-
+		
 		<!--Content wrapper starts-->
 		<div class="content_wrapper">
 
 			<div id="sidebar">
 				<div id="sidebar_title">Categories</div>
-
+					
 					<ul id="cats">
 
 						<?php
-							//show categories (list) from database
-							getCats();
-						?>
+							//show categories (list) from database  
+							getCats();  
+						?>	
 					</ul>
 
 					<div id="sidebar_title">Brands</div>
@@ -68,7 +68,7 @@ include("includes/db.php");//db.php means making a connection
 					</ul>
 
 
-
+				
 
 
 			</div>
@@ -80,7 +80,7 @@ include("includes/db.php");//db.php means making a connection
 				?>
 				<div id="shopping_cart">
 					<span style="float: right; font-size: 18px; padding: 5px; line-height: 40px;">Welcome Guest!
-					<b style="color:yellow">Shopping Cart -</b>Total Items:<?php total_items(); ?> Total Price: <?php  total_price(); ?><a href="cart.php" style="color:yellow">Go to Cart</a>
+					<b style="color:yellow">Shopping Cart -</b>Total Items:<?php total_items(); ?> Total Price: <?php  total_price(); ?><a href="cart.php" style="color:yellow">Go to Cart</a>	
 
 
 					</span>
@@ -97,7 +97,7 @@ include("includes/db.php");//db.php means making a connection
 							<td align="right">Customer Name:</td>
 							<td><input type="text" name="c_name" required /></td>
 						</tr>
-
+						
 						<tr>
 							<td align="right">Customer Email:</td>
 							<td><input type="text" name="c_email" required /></td>
@@ -137,17 +137,17 @@ include("includes/db.php");//db.php means making a connection
 						</tr>
 
 						<tr align="center">
-
+							
 							<td colspan="6"><input type="submit" name="register" value="Create an account"></td>
 						</tr>
 
+						
 
-
-					</table>
+					</table>	
 				</form>
-
-
-
+					
+					
+					
 				</div>
 
 
@@ -161,7 +161,7 @@ include("includes/db.php");//db.php means making a connection
 
 	</div><!-- close of main class main_wrapper-->
 </body>
-</html>
+</html>		
 <?php
 if(isset($_POST['register'])){
 	$ip = getIp();
@@ -182,8 +182,8 @@ if(isset($_POST['register'])){
 
 
 	$run_c = mysqli_query($con,"insert into customers(customer_ip,customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image) values('$ip','$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image')");
-
-
+	
+	
 	$sel_cart="select * from cart where ip_add='$ip' ";
 
 	$run_cart= mysqli_query($con,$sel_cart);

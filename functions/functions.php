@@ -1,10 +1,9 @@
 <?php
 
-$con = mysqli_connect("localhost","root","root","ecommerce");
-
+$con = mysqli_connect("localhost","root","","ecommerce");
 
 if(mysqli_connect_errno()){
-	echo "The connection was not established:"; 
+	echo "The connection was not established:" .mysqli_query_error(); 
 
 }
 //getting the user IP adress
@@ -20,6 +19,8 @@ if(mysqli_connect_errno()){
     	return $ip;
     	
 	}//close of getip()
+
+
 
 
 //add to cart features or creating the shopping cart

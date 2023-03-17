@@ -74,9 +74,8 @@ include("functions/functions.php");
 			<div id="content_area">
 
 				<div id="shopping_cart">
-					<span style="float: right; font-size: 18px; padding: 5px; line-height: 40px;">	
-					<!-- <b style="color:yellow">Shopping Cart -</b>Total Items: Total Price: <a href="cart.php" style="color:yellow">Go to Cart</a>	 -->
-					<button color="red"><a href="cart.php">Cart</a></button>
+					<span style="float: right; font-size: 18px; padding: 5px; line-height: 40px;">Welcome Guest!
+					<b style="color:yellow">Shopping Cart -</b>Total Items: Total Price: <a href="cart.php" style="color:yellow">Go to Cart</a>	
 
 
 					</span>
