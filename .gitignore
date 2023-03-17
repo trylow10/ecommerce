@@ -1,0 +1,7 @@
+/.idea
+mysql-data
+# Ignore PHP files
+# Ignore PHP directories
+/vendor/
+/node_modules/
+
